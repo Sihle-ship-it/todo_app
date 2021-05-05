@@ -1,14 +1,15 @@
-// import React from 'react';
+import React from "react";
 
-// const ItemsList = ({items}) => {
-//     return(
-//         <div>
-//             {
-//                 items.map((item) => <p>{ item }</p>)
-//             }
-//         </div>
-//     );
-// } 
+const ItemsList = ({ items }) => {
+  return (
+    <div text-white>
+      <ol className="list-disc">
+        {items.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ol>
+    </div>
+  );
+};
 
-
-// export default ItemsList
+export default ItemsList;

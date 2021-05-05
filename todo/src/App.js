@@ -21,28 +21,23 @@ class App extends React.Component {
   render() {
     return (
       <div className="p-6 max-w-sm mx-auto  items-center">
-        <h1 className="text-3xl text-center md:text-4xl  font-medium mb-2">TODO APP</h1>
+        <h1 className="text-3xl text-center md:text-4xl font-medium mb-2">TODO APP</h1>
 
-        <div className="mb-3 flex  mt-10 pt-0">
-        <form  ref = {input => this.addForm = input} onSubmit={this.handleChange}>
-        
+        <div className="mb-3 flex flex-row justify-between mt-10 pt-0">
+        <form ref = {input => this.addForm = input} onSubmit={this.handleChange}>
             <input
             type="search"
             placeholder="Enter todo"
             ref = {input => this.newTodo = input}
-            className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm border border-blueGray-300 outline-none focus:outline-none focus:ring w-full"
+            className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm border border-blueGray-300 outline-none focus:ring"
           />
-        
         <button
-        className="bg-blue-500 text-white rounded font-bold py-2 px-4">
+        className="bg-blue-500 text-white rounded font-bold py-3 px-4">
         Add
       </button>
     </form>
-
         </div>
-
-        
-        
+        <Item items={ this.state.todos }/>
       </div>
     );
   }
