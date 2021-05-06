@@ -3,8 +3,7 @@ import "./App.css";
 import Item from "./components/ItemsList/ItemsList";
 class App extends React.Component {
   constructor(){
-    super();
-    
+    super();    
     this.state = { todos: [] } 
   }
 
@@ -14,9 +13,7 @@ class App extends React.Component {
     this.setState({todos: [...this.state.todos, newTodo]});
     console.log(this.state.todos);
     this.addForm.reset();
-
   }
-
   
   render() {
     return (
